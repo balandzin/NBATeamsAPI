@@ -13,6 +13,7 @@
 		D34FC3A42B68DF8A000D5BD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34FC3A22B68DF8A000D5BD8 /* Main.storyboard */; };
 		D34FC3A62B68DF8C000D5BD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34FC3A52B68DF8C000D5BD8 /* Assets.xcassets */; };
 		D34FC3A92B68DF8C000D5BD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34FC3A72B68DF8C000D5BD8 /* LaunchScreen.storyboard */; };
+		D34FC3B52B68E0D2000D5BD8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FC3B42B68E0D2000D5BD8 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D34FC3A52B68DF8C000D5BD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D34FC3A82B68DF8C000D5BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D34FC3AA2B68DF8C000D5BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34FC3B42B68E0D2000D5BD8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		D34FC39B2B68DF8A000D5BD8 /* NBATeamsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				D34FC39C2B68DF8A000D5BD8 /* AppDelegate.swift */,
-				D34FC39E2B68DF8A000D5BD8 /* SceneDelegate.swift */,
-				D34FC3A02B68DF8A000D5BD8 /* ViewController.swift */,
-				D34FC3A22B68DF8A000D5BD8 /* Main.storyboard */,
-				D34FC3A52B68DF8C000D5BD8 /* Assets.xcassets */,
-				D34FC3A72B68DF8C000D5BD8 /* LaunchScreen.storyboard */,
-				D34FC3AA2B68DF8C000D5BD8 /* Info.plist */,
+				D34FC3B02B68DFEB000D5BD8 /* App */,
+				D34FC3B32B68E0AA000D5BD8 /* ViewControllers */,
+				D34FC3B12B68E080000D5BD8 /* Storyboards */,
+				D34FC3B62B68E0E3000D5BD8 /* Models */,
+				D34FC3B22B68E09B000D5BD8 /* Resources */,
 			);
 			path = NBATeamsAPI;
+			sourceTree = "<group>";
+		};
+		D34FC3B02B68DFEB000D5BD8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D34FC39E2B68DF8A000D5BD8 /* SceneDelegate.swift */,
+				D34FC39C2B68DF8A000D5BD8 /* AppDelegate.swift */,
+				D34FC3AA2B68DF8C000D5BD8 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D34FC3B12B68E080000D5BD8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D34FC3A22B68DF8A000D5BD8 /* Main.storyboard */,
+				D34FC3A72B68DF8C000D5BD8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D34FC3B22B68E09B000D5BD8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D34FC3A52B68DF8C000D5BD8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D34FC3B32B68E0AA000D5BD8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D34FC3A02B68DF8A000D5BD8 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D34FC3B62B68E0E3000D5BD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D34FC3B42B68E0D2000D5BD8 /* Team.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34FC3B52B68E0D2000D5BD8 /* Team.swift in Sources */,
 				D34FC3A12B68DF8A000D5BD8 /* ViewController.swift in Sources */,
 				D34FC39D2B68DF8A000D5BD8 /* AppDelegate.swift in Sources */,
 				D34FC39F2B68DF8A000D5BD8 /* SceneDelegate.swift in Sources */,
@@ -293,12 +337,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NBATeamsAPI/Info.plist;
+				INFOPLIST_FILE = NBATeamsAPI/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +350,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.balandzin.NBATeamsAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,12 +367,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NBATeamsAPI/Info.plist;
+				INFOPLIST_FILE = NBATeamsAPI/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +380,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.balandzin.NBATeamsAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
