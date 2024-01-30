@@ -34,7 +34,7 @@ final class ViewController: UIViewController {
                 let games = try JSONDecoder().decode(Games.self, from: data)
                 print(games)
             } catch {
-                print(error)
+                print(error.localizedDescription)
             }
         }.resume()
     }
