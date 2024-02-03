@@ -29,6 +29,7 @@ struct Game: Decodable {
         Date: \(date)
         Season: \(season)
         \(home_team.name) - \(visitor_team.name)
+        \(home_team.city) - \(visitor_team.city)
         \(home_team_score) - \(visitor_team_score)
         """
     }
