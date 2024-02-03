@@ -13,7 +13,7 @@ final class GameCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
 
     func configure(with game: Game) {
-        gamesLabel.text = "\(game.home_team.full_name) - \(game.visitor_team.full_name)"
+        gamesLabel.text = "\(game.homeTeam.fullName) - \(game.visitorTeam.fullName)"
         dateLabel.text = "Date: \(game.date)"
     }
 }

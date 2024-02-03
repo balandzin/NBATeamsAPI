@@ -59,6 +59,7 @@ extension GamesViewController {
             }
             
             let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             do {
                 self.games = try decoder.decode(Games.self, from: data)
