@@ -40,7 +40,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team - Team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-WU-7Cb">
-                                            <rect key="frame" x="110" y="0.0" width="273" height="41"/>
+                                            <rect key="frame" x="110" y="5" width="273" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="ftW-Gu-2E0"/>
                                             </constraints>
@@ -55,7 +55,7 @@
                                         <constraint firstAttribute="trailing" secondItem="xbM-WU-7Cb" secondAttribute="trailing" constant="10" id="LpG-73-7hT"/>
                                         <constraint firstItem="xbM-WU-7Cb" firstAttribute="leading" secondItem="EmR-Z8-b63" secondAttribute="trailing" constant="10" id="Rsv-ay-cxa"/>
                                         <constraint firstItem="EmR-Z8-b63" firstAttribute="top" secondItem="xnK-Sk-9uE" secondAttribute="top" id="ULB-HS-8Da"/>
-                                        <constraint firstItem="xbM-WU-7Cb" firstAttribute="top" secondItem="xnK-Sk-9uE" secondAttribute="top" id="Z0g-W5-2Le"/>
+                                        <constraint firstItem="xbM-WU-7Cb" firstAttribute="top" secondItem="xnK-Sk-9uE" secondAttribute="top" constant="5" id="Z0g-W5-2Le"/>
                                         <constraint firstAttribute="trailing" secondItem="CIi-5e-EtE" secondAttribute="trailing" constant="10" id="e6n-8J-lJa"/>
                                         <constraint firstItem="EmR-Z8-b63" firstAttribute="leading" secondItem="xnK-Sk-9uE" secondAttribute="leading" id="gRb-68-PSb"/>
                                         <constraint firstItem="CIi-5e-EtE" firstAttribute="leading" secondItem="EmR-Z8-b63" secondAttribute="trailing" constant="10" id="t3N-GA-Fdp"/>

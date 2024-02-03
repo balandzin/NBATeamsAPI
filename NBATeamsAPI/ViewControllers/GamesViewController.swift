@@ -9,7 +9,8 @@ import UIKit
 
 final class GamesViewController: UITableViewController {
     
-    /*API (сведения об играх команд NBA)
+    /*
+    API (сведения об играх команд NBA)
     находится по адресу https://www.balldontlie.io/home.html#introduction
      */
     
