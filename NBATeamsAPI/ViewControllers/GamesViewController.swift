@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class GamesViewController: UITableViewController {
     
     /*API (сведения об играх команд NBA)
     находится по адресу https://www.balldontlie.io/home.html#introduction
@@ -17,7 +17,7 @@ final class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = 100
         fetchTeam()
     }
     

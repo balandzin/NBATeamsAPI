@@ -1,17 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OcA-vu-3ax">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Games history-->
+        <scene sceneID="lIv-3Z-u87">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NBATeamsAPI" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tableViewController id="6y8-5H-8T6" customClass="GamesViewController" customModule="NBATeamsAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D0K-co-hu5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="eAk-Mc-VtG">
+                                <rect key="frame" x="0.0" y="50" width="393" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAk-Mc-VtG" id="xnK-Sk-9uE">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-Z8-b63">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="8ao-zD-gbS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team - Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-WU-7Cb">
+                                            <rect key="frame" x="140" y="0.0" width="243" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="41" id="ftW-Gu-2E0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIi-5e-EtE">
+                                            <rect key="frame" x="140" y="50" width="243" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="fYF-Hv-M0G"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="CIi-5e-EtE" secondAttribute="bottom" constant="20" id="DwI-BD-Up4"/>
+                                        <constraint firstAttribute="bottom" secondItem="EmR-Z8-b63" secondAttribute="bottom" id="KI9-vc-POe"/>
+                                        <constraint firstAttribute="trailing" secondItem="xbM-WU-7Cb" secondAttribute="trailing" constant="10" id="LpG-73-7hT"/>
+                                        <constraint firstItem="xbM-WU-7Cb" firstAttribute="leading" secondItem="EmR-Z8-b63" secondAttribute="trailing" constant="10" id="Rsv-ay-cxa"/>
+                                        <constraint firstItem="EmR-Z8-b63" firstAttribute="top" secondItem="xnK-Sk-9uE" secondAttribute="top" id="ULB-HS-8Da"/>
+                                        <constraint firstItem="xbM-WU-7Cb" firstAttribute="top" secondItem="xnK-Sk-9uE" secondAttribute="top" id="Z0g-W5-2Le"/>
+                                        <constraint firstAttribute="trailing" secondItem="CIi-5e-EtE" secondAttribute="trailing" constant="10" id="e6n-8J-lJa"/>
+                                        <constraint firstItem="EmR-Z8-b63" firstAttribute="leading" secondItem="xnK-Sk-9uE" secondAttribute="leading" id="gRb-68-PSb"/>
+                                        <constraint firstItem="CIi-5e-EtE" firstAttribute="leading" secondItem="EmR-Z8-b63" secondAttribute="trailing" constant="10" id="t3N-GA-Fdp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6y8-5H-8T6" id="6or-vU-uv7"/>
+                            <outlet property="delegate" destination="6y8-5H-8T6" id="bZb-ns-9GF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Games history" id="8dc-yh-D51"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsD-yZ-Uiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789" y="-2"/>
+            <point key="canvasLocation" x="-996.18320610687022" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GKB-Dc-dPy">
+            <objects>
+                <navigationController id="OcA-vu-3ax" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fIC-uJ-Cpa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6y8-5H-8T6" kind="relationship" relationship="rootViewController" id="pmK-cy-Tes"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGB-g7-TQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1898" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
