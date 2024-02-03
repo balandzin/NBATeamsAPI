@@ -13,7 +13,8 @@ final class GamesViewController: UITableViewController {
     находится по адресу https://www.balldontlie.io/home.html#introduction
      */
     
-    private var games: [Game] = []
+    private var games: Games!
+    private var gameData: [Game] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +22,26 @@ final class GamesViewController: UITableViewController {
         fetchGames()
     }
     
-    // MARK: - Table view data source
+// MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        games.count
+        gameData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as! GameCell
-        
-        let course = games[indexPath.row]
-        //cell.configure(with: course)
-        
+        let game = gameData[indexPath.row]
+        cell.configure(with: game)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let detailsVC = segue.destination as? GameDetailsViewController
+        detailsVC?.game = gameData[indexPath.row]
     }
 }
 
@@ -40,21 +49,27 @@ final class GamesViewController: UITableViewController {
 extension GamesViewController {
     private func fetchGames() {
         
-        URLSession.shared.dataTask(
-            with: URL(string: "https://www.balldontlie.io/api/v1/games")!
-        ) { [weak self] data, _, error in
+        guard let url = URL(string: "https://www.balldontlie.io/api/v1/games") else { return }
+        
+        URLSession.shared.dataTask( with: url) { [weak self] data, _, error in
             guard let self else { return }
             guard let data else {
-                print(error?.localizedDescription ?? "No error description")
+                print(error ?? "No error description")
                 return
             }
             
+            let decoder = JSONDecoder()
+            
             do {
-                let games = try JSONDecoder().decode(Games.self, from: data)
-                print(games)
+                self.games = try decoder.decode(Games.self, from: data)
+                gameData = games.data
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             } catch {
                 print(error.localizedDescription)
             }
+            
         }.resume()
     }
 }

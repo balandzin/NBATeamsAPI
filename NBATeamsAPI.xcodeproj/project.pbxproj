@@ -15,6 +15,7 @@
 		D34FC3A92B68DF8C000D5BD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34FC3A72B68DF8C000D5BD8 /* LaunchScreen.storyboard */; };
 		D34FC3B52B68E0D2000D5BD8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FC3B42B68E0D2000D5BD8 /* Team.swift */; };
 		D3CAC2FD2B6E6EB400659373 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CAC2FC2B6E6EB400659373 /* GameCell.swift */; };
+		D3CAC3002B6E91FD00659373 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CAC2FF2B6E91FD00659373 /* GameDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D34FC3AA2B68DF8C000D5BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D34FC3B42B68E0D2000D5BD8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		D3CAC2FC2B6E6EB400659373 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		D3CAC2FF2B6E91FD00659373 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D34FC3A02B68DF8A000D5BD8 /* GamesViewController.swift */,
+				D3CAC2FF2B6E91FD00659373 /* GameDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D34FC3B52B68E0D2000D5BD8 /* Team.swift in Sources */,
+				D3CAC3002B6E91FD00659373 /* GameDetailsViewController.swift in Sources */,
 				D34FC3A12B68DF8A000D5BD8 /* GamesViewController.swift in Sources */,
 				D3CAC2FD2B6E6EB400659373 /* GameCell.swift in Sources */,
 				D34FC39D2B68DF8A000D5BD8 /* AppDelegate.swift in Sources */,

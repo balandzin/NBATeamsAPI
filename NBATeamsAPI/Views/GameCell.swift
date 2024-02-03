@@ -12,9 +12,10 @@ final class GameCell: UITableViewCell {
     @IBOutlet var gamesLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with game: Game) {
+        //gamesLabel.text = "\(game.home_team) - \(game.visitor_team)"
+        gamesLabel.text = "\(game.home_team.full_name) - \(game.visitor_team.full_name)"
+        dateLabel.text = "Date: \(game.date)"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,5 +23,7 @@ final class GameCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

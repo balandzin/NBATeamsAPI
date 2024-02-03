@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +24,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-Z8-b63">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="85"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-Z8-b63">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="85"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="8ao-zD-gbS"/>
+                                                <constraint firstAttribute="width" constant="100" id="8ao-zD-gbS"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIi-5e-EtE">
-                                            <rect key="frame" x="140" y="50" width="243" height="15"/>
+                                            <rect key="frame" x="110" y="50" width="273" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="15" id="fYF-Hv-M0G"/>
                                             </constraints>
@@ -38,8 +39,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team - Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-WU-7Cb">
-                                            <rect key="frame" x="140" y="0.0" width="243" height="41"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team - Team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-WU-7Cb">
+                                            <rect key="frame" x="110" y="0.0" width="273" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="ftW-Gu-2E0"/>
                                             </constraints>
@@ -63,6 +64,7 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="CIi-5e-EtE" id="8Aw-OR-Dkg"/>
                                     <outlet property="gamesLabel" destination="xbM-WU-7Cb" id="GzC-V9-dMG"/>
+                                    <segue destination="mYa-eO-JL3" kind="show" id="C2g-Y4-Ja5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,6 +78,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsD-yZ-Uiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-996.18320610687022" y="0.0"/>
+        </scene>
+        <!--Game Details View Controller-->
+        <scene sceneID="Zhg-iT-0cl">
+            <objects>
+                <viewController id="mYa-eO-JL3" customClass="GameDetailsViewController" customModule="NBATeamsAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kpt-cW-adK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-tL-vcm">
+                                <rect key="frame" x="16" y="155" width="361" height="563"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dXR-QS-0Sb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mF1-tL-vcm" firstAttribute="top" secondItem="dXR-QS-0Sb" secondAttribute="top" id="5nN-Gh-gTN"/>
+                            <constraint firstItem="mF1-tL-vcm" firstAttribute="leading" secondItem="dXR-QS-0Sb" secondAttribute="leading" constant="16" id="6Wh-d4-qdz"/>
+                            <constraint firstItem="dXR-QS-0Sb" firstAttribute="trailing" secondItem="mF1-tL-vcm" secondAttribute="trailing" constant="16" id="FIl-vx-X18"/>
+                            <constraint firstItem="dXR-QS-0Sb" firstAttribute="bottom" secondItem="mF1-tL-vcm" secondAttribute="bottom" constant="100" id="wTJ-Yr-ge9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gxh-UP-d6t"/>
+                    <connections>
+                        <outlet property="gameDetailsLabel" destination="mF1-tL-vcm" id="CcU-fd-NZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dq3-fc-kt9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GKB-Dc-dPy">
@@ -95,6 +130,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ball" width="148.33332824707031" height="118.33333587646484"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
