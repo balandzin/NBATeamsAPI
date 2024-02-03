@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameDetailsViewController: UIViewController {
+final class GameDetailsViewController: UIViewController {
     
     @IBOutlet var gameDetailsLabel: UILabel!
     
