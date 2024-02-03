@@ -23,7 +23,7 @@ struct Game: Decodable {
     let home_team_score: Int
     let visitor_team: Team
     let visitor_team_score: Int
-    
+
     var description: String {
         """
         Date: \(date)
