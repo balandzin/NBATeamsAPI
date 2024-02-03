@@ -13,17 +13,36 @@ final class GamesViewController: UITableViewController {
     находится по адресу https://www.balldontlie.io/home.html#introduction
      */
     
-    private let link = URL(string: "https://www.balldontlie.io/api/v1/games")!
-        
+    private var games: [Game] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
-        fetchTeam()
+        fetchGames()
     }
     
-    private func fetchTeam() {
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        games.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as! GameCell
         
-        URLSession.shared.dataTask(with: link) { [weak self] data, _, error in
+        let course = games[indexPath.row]
+        //cell.configure(with: course)
+        
+        return cell
+    }
+}
+
+// MARK: - Networking
+extension GamesViewController {
+    private func fetchGames() {
+        
+        URLSession.shared.dataTask(
+            with: URL(string: "https://www.balldontlie.io/api/v1/games")!
+        ) { [weak self] data, _, error in
             guard let self else { return }
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")

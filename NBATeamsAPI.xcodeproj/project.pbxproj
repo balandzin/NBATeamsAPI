@@ -14,6 +14,7 @@
 		D34FC3A62B68DF8C000D5BD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34FC3A52B68DF8C000D5BD8 /* Assets.xcassets */; };
 		D34FC3A92B68DF8C000D5BD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34FC3A72B68DF8C000D5BD8 /* LaunchScreen.storyboard */; };
 		D34FC3B52B68E0D2000D5BD8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FC3B42B68E0D2000D5BD8 /* Team.swift */; };
+		D3CAC2FD2B6E6EB400659373 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CAC2FC2B6E6EB400659373 /* GameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D34FC3A82B68DF8C000D5BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D34FC3AA2B68DF8C000D5BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D34FC3B42B68E0D2000D5BD8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		D3CAC2FC2B6E6EB400659373 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				D34FC3B32B68E0AA000D5BD8 /* ViewControllers */,
+				D3CAC2FE2B6E6ECE00659373 /* Views */,
 				D34FC3B62B68E0E3000D5BD8 /* Models */,
 				D34FC3B12B68E080000D5BD8 /* Storyboards */,
 				D34FC3B22B68E09B000D5BD8 /* Resources */,
@@ -108,6 +111,14 @@
 				D34FC3B42B68E0D2000D5BD8 /* Team.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D3CAC2FE2B6E6ECE00659373 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3CAC2FC2B6E6EB400659373 /* GameCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			files = (
 				D34FC3B52B68E0D2000D5BD8 /* Team.swift in Sources */,
 				D34FC3A12B68DF8A000D5BD8 /* GamesViewController.swift in Sources */,
+				D3CAC2FD2B6E6EB400659373 /* GameCell.swift in Sources */,
 				D34FC39D2B68DF8A000D5BD8 /* AppDelegate.swift in Sources */,
 				D34FC39F2B68DF8A000D5BD8 /* SceneDelegate.swift in Sources */,
 			);

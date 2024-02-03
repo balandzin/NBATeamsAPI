@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="eAk-Mc-VtG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="85" id="eAk-Mc-VtG" customClass="GameCell" customModule="NBATeamsAPI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAk-Mc-VtG" id="xnK-Sk-9uE">
@@ -29,21 +29,21 @@
                                                 <constraint firstAttribute="width" constant="130" id="8ao-zD-gbS"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team - Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-WU-7Cb">
-                                            <rect key="frame" x="140" y="0.0" width="243" height="41"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="41" id="ftW-Gu-2E0"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIi-5e-EtE">
                                             <rect key="frame" x="140" y="50" width="243" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="15" id="fYF-Hv-M0G"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team - Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-WU-7Cb">
+                                            <rect key="frame" x="140" y="0.0" width="243" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="41" id="ftW-Gu-2E0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -60,6 +60,10 @@
                                         <constraint firstItem="CIi-5e-EtE" firstAttribute="leading" secondItem="EmR-Z8-b63" secondAttribute="trailing" constant="10" id="t3N-GA-Fdp"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="CIi-5e-EtE" id="8Aw-OR-Dkg"/>
+                                    <outlet property="gamesLabel" destination="xbM-WU-7Cb" id="GzC-V9-dMG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
